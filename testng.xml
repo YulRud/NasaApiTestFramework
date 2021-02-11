@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="API_Test_Suite" configfailurepolicy="continue" parallel="tests" thread-count="2"  verbose="1">
+    <listeners>
+        <listener class-name="com.yulrud.nasaapi.Listeners.TestPassFailListener"/>
+        <listener class-name="com.yulrud.nasaapi.Listeners.TestLogListener"/>
+    </listeners>
+    <test name="Curiosity photo test">
+        <classes>
+            <class name="com.yulrud.nasaapi.SolAndEarthDateRequestsSameResultTest"/>
+        </classes>
+    </test>
+    <test name="Curiosity cameras' productivity test">
+        <classes>
+            <class name="com.yulrud.nasaapi.PhotosQuantityTest"/>
+        </classes>
+    </test>
+</suite>
