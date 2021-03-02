@@ -13,11 +13,11 @@ Prerequisites for project:
 2. There is allure 2.13.8 or higher installed
 
 To start the project:
-1. to download a project
+1. to download a project:
 git clone https://github.com/YulRud/NasaApiTestFramework.git
-2. To start testing
+2. To start testing:
 mvn clean test
-3. To start allure report with results
+3. To start allure report with results:
 mvn allure:serve
 
 TestNG standard report: target/surefire-reports/index.html
