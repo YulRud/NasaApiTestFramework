@@ -1,10 +1,11 @@
 # NasaApiTestFramework
-This is an API project,
-Here I get, download and compare Mars photos made with different cameras using free nasa api (baseUrl=https://api.nasa.gov)
+This is an API project:
+here I get, download and compare Mars photos made with different cameras using free nasa api (baseUrl=https://api.nasa.gov)
+
 Technologies: 
-TestNG, RestAssured, Jackson for tests;
-AllureReport and TestNG report for reporting; 
-Log4j, testng.Reporter for logging; 
+1. TestNG + RestAssured + Jackson + Java 8 for tests;
+2. AllureReport and TestNG report for reporting; 
+3. Log4j, testng.Reporter for logging; 
 
 also I rolled out the project on my local Jenkins with AllureReport, TestNG Report and custom HTML report
 
