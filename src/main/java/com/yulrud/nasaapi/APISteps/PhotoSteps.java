@@ -19,8 +19,16 @@ public class PhotoSteps {
     @Step
     public double getRatioBetweenMostAndLessProductiveCameras(List<Photo> photos) {
         Map<String, Integer> photosByCamera = this.getPhotosQtyByCamera(photos);
-        double maxPhotos = photosByCamera.entrySet().stream().max(Comparator.comparing(Map.Entry::getValue)).get().getValue();
-        double minPhotos = photosByCamera.entrySet().stream().min(Comparator.comparing(Map.Entry::getValue)).get().getValue();
+        double maxPhotos = photosByCamera.entrySet()
+                .stream()
+                .max(Comparator.comparing(Map.Entry::getValue))
+                .get()
+                .getValue();
+        double minPhotos = photosByCamera.entrySet()
+                .stream()
+                .min(Comparator.comparing(Map.Entry::getValue))
+                .get()
+                .getValue();
         return maxPhotos / minPhotos;
     }
 
