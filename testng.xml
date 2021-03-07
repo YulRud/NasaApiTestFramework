@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="API_Test_Suite" configfailurepolicy="continue" parallel="tests" thread-count="2"  verbose="1">
     <listeners>
-        <listener class-name="com.yulrud.nasaapi.Listeners.TestPassFailListener"/>
         <listener class-name="com.yulrud.nasaapi.Listeners.TestLogListener"/>
+        <listener class-name="com.yulrud.nasaapi.reporting.CustomHTMLReport"/>
     </listeners>
     <test name="Curiosity photo test">
         <classes>

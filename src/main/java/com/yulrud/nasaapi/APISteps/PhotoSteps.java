@@ -2,6 +2,7 @@ package com.yulrud.nasaapi.APISteps;
 
 import com.yulrud.nasaapi.APIRequestSteps.PhotoRequestSteps;
 import com.yulrud.nasaapi.POJOs.Photo;
+import com.yulrud.nasaapi.TestLogger;
 import com.yulrud.nasaapi.Utils.ImageUtils;
 import io.qameta.allure.Step;
 import org.testng.Assert;
@@ -11,8 +12,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static com.yulrud.nasaapi.TestLogger.LOGGER;
 
 public class PhotoSteps {
     private PhotoRequestSteps photoRequestSteps = new PhotoRequestSteps();
@@ -41,7 +40,7 @@ public class PhotoSteps {
             cameraPhotos = photosByCamera.get(cameraName);
             photosByCamera.put(cameraName, cameraPhotos == null ? 1 : cameraPhotos + 1);
         }
-        LOGGER.info(String.format("Quantity of photos that was made by each camera was calculated \n %s", photosByCamera));
+        TestLogger.log(String.format("Quantity of photos that was made by each camera was calculated \n %s", photosByCamera));
         return photosByCamera;
     }
 

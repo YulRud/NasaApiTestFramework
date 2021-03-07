@@ -30,11 +30,9 @@ public class TestLogListener implements ITestListener {
 
     public void onStart(ITestContext context) {
         LOGGER.info("=========== onStart :-" + context.getName() + "===============");
-
     }
 
     public void onFinish(ITestContext context) {
         LOGGER.info("=========== onFinish :-" + context.getName() + "===============");
-
     }
 }

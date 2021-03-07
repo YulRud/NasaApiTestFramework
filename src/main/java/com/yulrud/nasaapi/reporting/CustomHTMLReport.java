@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 import static com.yulrud.nasaapi.TestLogger.LOGGER;
 
-public class CustomerTestNGReport implements IReporter {
+public class CustomHTMLReport implements IReporter {
     private static final String TEMPLATE_LOCATION = "src/main/resources/customize-emailable-report-template.html";
 
     @Override

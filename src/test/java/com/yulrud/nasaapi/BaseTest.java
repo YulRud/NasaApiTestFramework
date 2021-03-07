@@ -1,7 +1,6 @@
 package com.yulrud.nasaapi;
 
 import com.yulrud.nasaapi.Utils.ConfigFileReader;
-import io.qameta.allure.Description;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import org.apache.log4j.BasicConfigurator;
@@ -16,7 +15,7 @@ public abstract class BaseTest {
     }
 
     @BeforeTest
-    public void setFilter(){
+    public void setFilter() {
         RestAssured.filters(new AllureRestAssured());
     }
 }

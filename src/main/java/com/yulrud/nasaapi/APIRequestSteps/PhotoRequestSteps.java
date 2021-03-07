@@ -2,6 +2,7 @@ package com.yulrud.nasaapi.APIRequestSteps;
 
 import com.yulrud.nasaapi.Enums.Endpoints;
 import com.yulrud.nasaapi.POJOs.Photo;
+import com.yulrud.nasaapi.TestLogger;
 import io.qameta.allure.Step;
 
 import javax.imageio.ImageIO;
@@ -73,7 +74,7 @@ public class PhotoRequestSteps extends BaseRequestSteps {
         } catch (IOException e) {
             LOGGER.error(String.format("Not able to download/read an image by url: %s", url));
         }
-        LOGGER.info(String.format("The image downloaded from url: %s was read", url));
+        TestLogger.log(String.format("The image downloaded from url: %s was read", url));
         return image;
     }
 }
