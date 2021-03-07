@@ -12,14 +12,14 @@ import java.util.concurrent.TimeUnit;
 import static com.yulrud.nasaapi.TestLogger.LOGGER;
 
 public class CustomHTMLReport implements IReporter {
-    private static final String TEMPLATE_LOCATION = "src/main/resources/customize-emailable-report-template.html";
+    private static final String TEMPLATE_LOCATION = "src/main/resources/custom-report-template.html";
 
     @Override
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
 
         try {
             // Get content data in TestNG report template file.
-            String customReportTemplateStr = this.readEmailableReportTemplate();
+            String customReportTemplateStr = this.readReportTemplate();
 
             // Create custom report title.
             String customReportTitle = this.getCustomReportTitle("Test Results Report");
@@ -53,7 +53,7 @@ public class CustomHTMLReport implements IReporter {
     }
 
     /* Read template content. */
-    private String readEmailableReportTemplate() {
+    private String readReportTemplate() {
         StringBuilder template = new StringBuilder();
 
         try {
